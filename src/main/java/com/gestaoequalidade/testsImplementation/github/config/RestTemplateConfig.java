@@ -1,4 +1,4 @@
-package com.example.aulateste.github.config;
+package com.gestaoequalidade.testsImplementation.github.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

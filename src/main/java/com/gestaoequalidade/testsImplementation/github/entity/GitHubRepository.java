@@ -1,4 +1,4 @@
-package com.example.aulateste.github.entity;
+package com.gestaoequalidade.testsImplementation.github.entity;
 
 public class GitHubRepository {
     private String name;

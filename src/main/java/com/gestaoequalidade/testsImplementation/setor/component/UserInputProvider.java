@@ -1,4 +1,4 @@
-package com.example.aulateste.setor.component;
+package com.gestaoequalidade.testsImplementation.setor.component;
 
 public interface UserInputProvider {
     String getUserInput();

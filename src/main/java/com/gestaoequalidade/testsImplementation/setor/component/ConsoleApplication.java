@@ -1,11 +1,8 @@
-package com.example.aulateste.setor.component;
+package com.gestaoequalidade.testsImplementation.setor.component;
 
-import com.example.aulateste.setor.controller.SetorController;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.gestaoequalidade.testsImplementation.setor.controller.SetorController;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
-
-import java.util.Scanner;
 
 @Component
 public class ConsoleApplication implements CommandLineRunner {

@@ -1,6 +1,6 @@
-package com.example.aulateste.setor.repository;
+package com.gestaoequalidade.testsImplementation.setor.repository;
 
-import com.example.aulateste.setor.entity.Setor;
+import com.gestaoequalidade.testsImplementation.setor.entity.Setor;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;

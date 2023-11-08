@@ -1,4 +1,4 @@
-package com.example.aulateste.setor.entity;
+package com.gestaoequalidade.testsImplementation.setor.entity;
 
 public class Setor {
 

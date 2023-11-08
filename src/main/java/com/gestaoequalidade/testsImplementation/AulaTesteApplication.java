@@ -1,4 +1,4 @@
-package com.example.aulateste;
+package com.gestaoequalidade.testsImplementation;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
