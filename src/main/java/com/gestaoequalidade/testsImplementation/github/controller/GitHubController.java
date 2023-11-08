@@ -1,8 +1,8 @@
-package com.example.aulateste.github.controller;
+package com.gestaoequalidade.testsImplementation.github.controller;
 
-import com.example.aulateste.github.component.GitHubUserAndRepos;
-import com.example.aulateste.github.entity.GitHubRepository;
-import com.example.aulateste.github.entity.GitHubUser;
+import com.gestaoequalidade.testsImplementation.github.component.GitHubUserAndRepos;
+import com.gestaoequalidade.testsImplementation.github.entity.GitHubRepository;
+import com.gestaoequalidade.testsImplementation.github.entity.GitHubUser;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;

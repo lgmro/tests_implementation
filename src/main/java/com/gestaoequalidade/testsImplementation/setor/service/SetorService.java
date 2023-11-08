@@ -1,7 +1,7 @@
-package com.example.aulateste.setor.service;
+package com.gestaoequalidade.testsImplementation.setor.service;
 
-import com.example.aulateste.setor.entity.Setor;
-import com.example.aulateste.setor.repository.SetorRepository;
+import com.gestaoequalidade.testsImplementation.setor.entity.Setor;
+import com.gestaoequalidade.testsImplementation.setor.repository.SetorRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

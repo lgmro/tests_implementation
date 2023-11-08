@@ -1,6 +1,6 @@
-package com.example.aulateste.setor.component;
+package com.gestaoequalidade.testsImplementation.setor.component;
 
-import com.example.aulateste.setor.controller.SetorController;
+import com.gestaoequalidade.testsImplementation.setor.controller.SetorController;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
