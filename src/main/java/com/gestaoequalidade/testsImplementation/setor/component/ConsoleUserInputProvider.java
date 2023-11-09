@@ -1,4 +1,4 @@
-package com.example.aulateste.setor.component;
+package com.gestaoequalidade.testsImplementation.setor.component;
 
 import org.springframework.stereotype.Component;
 

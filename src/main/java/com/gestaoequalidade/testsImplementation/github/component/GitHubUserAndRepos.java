@@ -1,7 +1,7 @@
-package com.example.aulateste.github.component;
+package com.gestaoequalidade.testsImplementation.github.component;
 
-import com.example.aulateste.github.entity.GitHubRepository;
-import com.example.aulateste.github.entity.GitHubUser;
+import com.gestaoequalidade.testsImplementation.github.entity.GitHubRepository;
+import com.gestaoequalidade.testsImplementation.github.entity.GitHubUser;
 
 public class GitHubUserAndRepos {
     private final GitHubUser user;

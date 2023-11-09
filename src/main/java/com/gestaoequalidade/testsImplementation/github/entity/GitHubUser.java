@@ -1,4 +1,4 @@
-package com.example.aulateste.github.entity;
+package com.gestaoequalidade.testsImplementation.github.entity;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 

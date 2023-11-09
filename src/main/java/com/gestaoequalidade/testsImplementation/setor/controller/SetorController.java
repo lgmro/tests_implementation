@@ -1,13 +1,12 @@
-package com.example.aulateste.setor.controller;
+package com.gestaoequalidade.testsImplementation.setor.controller;
 
-import com.example.aulateste.setor.component.UserInputProvider;
-import com.example.aulateste.setor.entity.Setor;
-import com.example.aulateste.setor.service.SetorService;
+import com.gestaoequalidade.testsImplementation.setor.component.UserInputProvider;
+import com.gestaoequalidade.testsImplementation.setor.entity.Setor;
+import com.gestaoequalidade.testsImplementation.setor.service.SetorService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
 import java.util.List;
-import java.util.Scanner;
 
 @Controller
 public class SetorController {
