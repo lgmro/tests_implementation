@@ -17,7 +17,10 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
-import static org.mockito.Mockito.*;
+import static org.mockito.Mockito.when;
+import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.times;
+
 
 @ExtendWith(MockitoExtension.class)
 public class SetorControllerTest {
@@ -113,7 +116,6 @@ public class SetorControllerTest {
         assertEquals(SETOR_NAME_FINANCEIRO, setorCaptor.getValue().getNome());
     }
 
-
     @Test
     void dadoQueUsuarioQuerEditarUmSetorQuandoChamarEditarSetorEUsuarioCancelarAlteracaoDeveInterromperAlteracao() {
         // Mock
@@ -169,7 +171,6 @@ public class SetorControllerTest {
         assertEquals(setor.getId(), idSetorCaptor.getValue());
     }
 
-
     @Test
     void dadoQueUsuarioQuerExcluirUmSetorQuandoUsuarioCancelarAExclusaoDeveMostrarMessagemDeExlusaoCancelada() {
         // Mock
@@ -185,7 +186,6 @@ public class SetorControllerTest {
         verify(userInputProvider, times(1)).setUserOutput(OPCOES_CONFIRMACAO_ALTERACAO_EXLUSAO_SETOR_MESSAGEM);
         verify(userInputProvider, times(1)).setUserOutput(EXCLUSAO_SETOR_CANCELADA_MESSAGEM);
     }
-
 
     @Test
     void dadoQueUsuarioQuerExcluirUmSetorQuandoSetorDesejadoNaoForEncontradoDeveExibirUmaMessagemDeSetorNaoEncontrado() {
