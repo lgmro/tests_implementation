@@ -48,9 +48,6 @@ public class SetorControllerTest {
     @Test
     void dadoQueExisteSetoresCadastradosQuandoChamarListarSetoresDeveRetornarAListaDeSetores() {
         // Arrange
-        Setor setor = new Setor();
-        setor.setId(1L);
-        setor.setNome(SETOR_NAME_RH);
         List<Setor> setores = new ArrayList<>();
         setores.add(setor);
 
