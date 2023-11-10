@@ -59,6 +59,7 @@ public class SetorController {
             String nome = userInputProvider.getUserInput();
 
             Setor setorAtualizado = new Setor();
+            setorAtualizado.setId(id);
             setorAtualizado.setNome(nome);
             printDivisor();
             userInputProvider.setUserOutput("Você tem certeza que quer alterar o Setor de:");
