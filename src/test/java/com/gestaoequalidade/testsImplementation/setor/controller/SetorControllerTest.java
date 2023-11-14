@@ -42,14 +42,14 @@ public class SetorControllerTest {
     private Setor setor = new Setor();
 
     @BeforeEach
-    void setUp() {
+    void setup() {
         setor.setId(1L);
         setor.setNome(SETOR_NAME_RH);
 
     }
 
     @Test
-    void dadoQueExisteSetoresCadastradosQuandoChamarListarSetoresDeveRetornarAListaDeSetores() {
+    void dado_que_existe_setores_cadastrados_quando_chamar_listar_setores_deve_retornar_a_lista_de_setores() {
         // Arrange
         List<Setor> setores = new ArrayList<>();
         setores.add(setor);
@@ -73,7 +73,7 @@ public class SetorControllerTest {
     }
 
     @Test
-    void dadoQueUsuarioQuerCriarUmSetorQuandoChamarCriarSetorDeveSalvarOSetor() {
+    void dado_que_usuario_quer_criar_um_setor_quando_chamar_criar_setor_deve_salvar_o_setor() {
         // Mock
         when(userInputProvider.getUserInput()).thenReturn(SETOR_NAME_RH);
 
@@ -90,7 +90,7 @@ public class SetorControllerTest {
     }
 
     @Test
-    void dadoQueUsuarioQuerEditarUmSetorQuandoChamarEditarSetorEUsuarioConfirmarAlteracaoDeveAtualizarSetorCorretamente() {
+    void dado_que_usuario_quer_editar_um_setor_quando_chamar_editar_setor_e_esuario_confirmar_alteracao_deve_atualizar_setor_corretamente() {
         // Mock
         when(userInputProvider.getUserInput()).thenReturn("1", SETOR_NAME_FINANCEIRO, RESPOSTA_SIM);
         when(setorService.buscarSetorPorId(setor.getId())).thenReturn(setor);
@@ -117,7 +117,7 @@ public class SetorControllerTest {
     }
 
     @Test
-    void dadoQueUsuarioQuerEditarUmSetorQuandoChamarEditarSetorEUsuarioCancelarAlteracaoDeveInterromperAlteracao() {
+    void dado_que_usuario_quer_editar_um_setor_quando_chamar_editar_setor_e_usuario_cancelar_alteracao_deve_interromper_alteracao() {
         // Mock
         when(userInputProvider.getUserInput()).thenReturn("1", SETOR_NAME_FINANCEIRO, RESPOSTA_NAO);
         when(setorService.buscarSetorPorId(setor.getId())).thenReturn(setor);
@@ -138,7 +138,7 @@ public class SetorControllerTest {
     }
 
     @Test
-    void dadoQueUsuarioQuerEditarUmSetorQuandoSetorDesejadoNaoForEncontradoDeveExibirUmaMessagemDeSetorNaoEncontrado() {
+    void dado_que_usuario_quer_editar_um_setor_quando_setor_desejado_nao_for_encontrado_deve_exibir_uma_messagem_de_setor_nao_encontrado() {
         // Mock
         when(userInputProvider.getUserInput()).thenReturn("0");
         when(setorService.buscarSetorPorId(0L)).thenReturn(null);
@@ -152,7 +152,7 @@ public class SetorControllerTest {
     }
 
     @Test
-    void dadoQueUsuarioQuerExcluirUmSetorQuandoUsuarioConfirmarAExclusaoDeveExcluirSetorApropriadamente() {
+    void dado_que_usuario_quer_excluir_um_setor_quando_usuario_confirmar_a_exclusao_deve_excluir_setor_apropriadamente() {
         // Mock
         when(userInputProvider.getUserInput()).thenReturn("1", RESPOSTA_SIM);
         when(setorService.buscarSetorPorId(setor.getId())).thenReturn(setor);
@@ -172,7 +172,7 @@ public class SetorControllerTest {
     }
 
     @Test
-    void dadoQueUsuarioQuerExcluirUmSetorQuandoUsuarioCancelarAExclusaoDeveMostrarMessagemDeExlusaoCancelada() {
+    void dado_que_usuario_quer_excluir_um_setor_quando_usuario_cancelar_a_exclusao_deve_mostrar_messagem_de_exlusao_cancelada() {
         // Mock
         when(userInputProvider.getUserInput()).thenReturn("1", RESPOSTA_NAO);
         when(setorService.buscarSetorPorId(setor.getId())).thenReturn(setor);
@@ -188,7 +188,7 @@ public class SetorControllerTest {
     }
 
     @Test
-    void dadoQueUsuarioQuerExcluirUmSetorQuandoSetorDesejadoNaoForEncontradoDeveExibirUmaMessagemDeSetorNaoEncontrado() {
+    void dado_que_usuario_quer_excluir_um_setor_quando_setor_desejado_nao_for_encontrado_deve_exibir_uma_messagem_de_setor_nao_encontrado() {
         // Mock
         when(userInputProvider.getUserInput()).thenReturn("0");
         when(setorService.buscarSetorPorId(0L)).thenReturn(null);
