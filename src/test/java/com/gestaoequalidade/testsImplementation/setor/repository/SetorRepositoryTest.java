@@ -39,7 +39,7 @@ public class SetorRepositoryTest {
     }
 
     @Test
-    void dado_que_nao_ha_setor_cadastrado_quando_chamar_criar_setor_com_um_setor_deve_salvar_novo_setor() {
+    void dado_que_nao_hastrado_quando_chamar_criar_setor_com_um_setor_deve_salvar_novo_setor() {
         // Act
         Setor result = setorRepository.criarSetor(setor);
 
