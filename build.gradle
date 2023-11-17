@@ -25,6 +25,7 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	testImplementation 'junit:junit:4.13.1'
 	integrationTestsImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
@@ -36,3 +37,15 @@ jacocoTestReport {
 	dependsOn(test)
 }
 
+tasks.register('checkTestsAndGenerateReport', GradleBuild) {
+	tasks = [
+			':test',
+			':integrationTests',
+			':jacocoTestReport'
+	]
+}
+
+
+tasks.withType(Test) {
+	useJUnitPlatform()
+}
