@@ -31,7 +31,7 @@ No terminal você verá o seguinte menu para criação, edição e exlucão de s
 </div>
 
 ## Tasks do gradle
-1. Para rodar todos os testes (unitários e de integração) e gerar um report no jacoco rode a seguinte tarefa pelo terminal: **./gradlew checkTestAndGenerateReport**.
+1. Para rodar todos os testes (unitários e de integração) e gerar um report no jacoco (obs.: os testes de integração não aumentam o coverage no jacoco) rode a seguinte tarefa pelo terminal: **./gradlew checkTestAndGenerateReport**.
 2. Para rodar somente os testes unitário use: **./gradlew test**;
 3. Para rodar somente os testes de integração use: **./gradlew integrationTests**.
 4. Os reports do jacoco estarão localizados em: 'build/reports/test/html/index.html'. Conforme imagem abaixo: 
