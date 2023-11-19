@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ConsoleMenuHandler.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">tests_implementation</a> &gt; <a href="index.source.html" class="el_package">com.gestaoequalidade.testsImplementation.setor.component</a> &gt; <span class="el_source">ConsoleMenuHandler.java</span></div><h1>ConsoleMenuHandler.java</h1><pre class="source lang-java linenums">package com.gestaoequalidade.testsImplementation.setor.component;
+
+import com.gestaoequalidade.testsImplementation.setor.controller.SetorController;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+interface MenuHandlerInterface {
+    void handleMenu(SetorController setorController);
+}
+
+@Component
+public class ConsoleMenuHandler implements MenuHandlerInterface {
+
+    UserInputProvider userInputProvider;
+
+    @Autowired
+<span class="fc" id="L17">    public ConsoleMenuHandler(UserInputProvider userInputProvider) {</span>
+<span class="fc" id="L18">        this.userInputProvider = userInputProvider;</span>
+<span class="fc" id="L19">    }</span>
+
+    @Override
+    public void handleMenu(SetorController setorController) {
+<span class="fc" id="L23">        boolean isLoop = true;</span>
+<span class="fc bfc" id="L24" title="All 2 branches covered.">        while (isLoop) {</span>
+<span class="fc" id="L25">            setorController.listarSetores();</span>
+<span class="fc" id="L26">            System.out.println(&quot;\nMenu:&quot;);</span>
+<span class="fc" id="L27">            System.out.println(&quot;1. Criar Setor&quot;);</span>
+<span class="fc" id="L28">            System.out.println(&quot;2. Editar Setor&quot;);</span>
+<span class="fc" id="L29">            System.out.println(&quot;3. Excluir Setor&quot;);</span>
+<span class="fc" id="L30">            System.out.println(&quot;0. Sair&quot;);</span>
+
+<span class="fc" id="L32">            int opcao = Integer.parseInt(userInputProvider.getUserInput());</span>
+
+<span class="fc bfc" id="L34" title="All 5 branches covered.">            switch (opcao) {</span>
+                case 1:
+<span class="fc" id="L36">                    setorController.criarSetor();</span>
+<span class="fc" id="L37">                    break;</span>
+                case 2:
+<span class="fc" id="L39">                    setorController.editarSetor();</span>
+<span class="fc" id="L40">                    break;</span>
+                case 3:
+<span class="fc" id="L42">                    setorController.excluirSetor();</span>
+<span class="fc" id="L43">                    break;</span>
+                case 0:
+<span class="fc" id="L45">                    userInputProvider.setUserOutput(&quot;Saindo...&quot;);</span>
+<span class="fc" id="L46">                    isLoop = false;</span>
+<span class="fc" id="L47">                    break;</span>
+                default:
+<span class="fc" id="L49">                    userInputProvider.setUserOutput(&quot;Opção inválida.&quot;);</span>
+            }
+<span class="fc" id="L51">        }</span>
+<span class="fc" id="L52">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.9.202303310957</span></div></body></html>
