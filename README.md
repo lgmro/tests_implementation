@@ -17,4 +17,25 @@
 ## Como rodar esse projeto localmente
 1. Rode a api em sua ide de preferência.
 
-O projeto será iniciado na porta 8090. Poderá usar a seguinte url para teste da integração com o gihub: `localhost:8090/github/user/'Nome do usuario no github'`
+O projeto será iniciado na porta 8090. Poderá usar a seguinte url para teste da integração com o gihub: `localhost:8090/github/user/'Nome do usuario no github'`;
+
+No terminal você verá o seguinte menu para criação, edição e exlucão de setores:
+<div align = "center">
+    <img src= "https://github.com/lgmro/SD_ProjetoSocket/assets/84135761/7fab082b-87c7-4322-9d45-12bd4415a11e" width = "800px"/>
+</div>
+
+## Testes
+1. No projeto terá a pasta 'src/test' aonde ficam localizados os testes de unidade e a pasta 'src/integrationTests' aonde ficam localizados os testes de integração. Conforme imagem abaixo: 
+<div align = "center">
+    <img src= "https://github.com/lgmro/SD_ProjetoSocket/assets/84135761/80c93abe-459d-4bce-8c84-fbb2e1a106b2" width = "800px"/>
+</div>
+
+## Tasks do gradle
+1. Para rodar todos os testes (unitários e de integração) e gerar um report no jacoco rode a seguinte tarefa pelo terminal: **./gradlew checkTestAndGenerateReport**.
+2. Para rodar somente os testes unitário use: **./gradlew test**;
+3. Para rodar somente os testes de integração use: **./gradlew integrationTests**.
+4. Os reports do jacoco estarão localizados em: 'build/reports/test/html/index.html'. Conforme imagem abaixo: 
+<div align = "center">
+    <img src= "https://github.com/lgmro/tests_implementation/assets/84135761/ac93fdeb-d2b4-41ff-a005-f9f9133fdfc3" width = "800px"/>
+</div>
+
